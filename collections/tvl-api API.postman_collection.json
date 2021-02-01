@@ -1,0 +1,527 @@
+{
+	"info": {
+		"_postman_id": "43aab911-2069-4ebf-9575-48b53d9b16b6",
+		"name": "tvl-api API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Meta",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{tvl-api-token}}"
+					}
+				],
+				"url": {
+					"raw": "{{tvl-api-url}}/v2/meta",
+					"host": [
+						"{{tvl-api-url}}"
+					],
+					"path": [
+						"v2",
+						"meta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SASB Articles",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{tvl-api-token}}"
+					}
+				],
+				"url": {
+					"raw": "{{tvl-api-url}}/v2/sasb/orgs/articles?ids=KR7015760002&start=2020-08-01&bullets=true",
+					"host": [
+						"{{tvl-api-url}}"
+					],
+					"path": [
+						"v2",
+						"sasb",
+						"orgs",
+						"articles"
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "KR7015760002"
+						},
+						{
+							"key": "start",
+							"value": "2020-08-01"
+						},
+						{
+							"key": "end",
+							"value": "2020-10-12",
+							"disabled": true
+						},
+						{
+							"key": "bullets",
+							"value": "true"
+						},
+						{
+							"key": "pullBy",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "categories",
+							"value": "BusinessEthics,SupplyChainManagement",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SASB Scores",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{tvl-api-token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{tvl-api-url}}/v2/sasb/orgs/scores?ids=KR7015760002&start=2020-08-01",
+					"host": [
+						"{{tvl-api-url}}"
+					],
+					"path": [
+						"v2",
+						"sasb",
+						"orgs",
+						"scores"
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "KR7015760002"
+						},
+						{
+							"key": "start",
+							"value": "2020-08-01"
+						},
+						{
+							"key": "end",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "customDates",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "frequency",
+							"value": "w",
+							"disabled": true
+						},
+						{
+							"key": "categories",
+							"value": "BusinessEthics,SupplyChainManagement",
+							"disabled": true
+						},
+						{
+							"key": "types",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SASB Scores (Limited)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{tvl-api-token}}"
+					}
+				],
+				"url": {
+					"raw": "{{tvl-api-url}}/v2/sasb/orgs/scoresLimited?ids=KR7015760002",
+					"host": [
+						"{{tvl-api-url}}"
+					],
+					"path": [
+						"v2",
+						"sasb",
+						"orgs",
+						"scoresLimited"
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "KR7015760002"
+						},
+						{
+							"key": "categories",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SASB Spotlights",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{tvl-api-token}}"
+					}
+				],
+				"url": {
+					"raw": "{{tvl-api-url}}/v2/sasb/orgs/spotlights?ids=KR7015760002&start=2020-08-01&bullets=true",
+					"host": [
+						"{{tvl-api-url}}"
+					],
+					"path": [
+						"v2",
+						"sasb",
+						"orgs",
+						"spotlights"
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "KR7015760002"
+						},
+						{
+							"key": "start",
+							"value": "2020-08-01"
+						},
+						{
+							"key": "end",
+							"value": "2020-10-12",
+							"disabled": true
+						},
+						{
+							"key": "bullets",
+							"value": "true"
+						},
+						{
+							"key": "primarOnly",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "categories",
+							"value": "BusinessEthics,SupplyChainManagement",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SDG Articles",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{tvl-api-token}}"
+					}
+				],
+				"url": {
+					"raw": "{{tvl-api-url}}/v2/sdg/orgs/articles?ids=KR7015760002&start=2020-08-01&bullets=true",
+					"host": [
+						"{{tvl-api-url}}"
+					],
+					"path": [
+						"v2",
+						"sdg",
+						"orgs",
+						"articles"
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "KR7015760002"
+						},
+						{
+							"key": "start",
+							"value": "2020-08-01"
+						},
+						{
+							"key": "end",
+							"value": "2020-10-12",
+							"disabled": true
+						},
+						{
+							"key": "bullets",
+							"value": "true"
+						},
+						{
+							"key": "pullBy",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "categories",
+							"value": "BusinessEthics,SupplyChainManagement",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SDG Scores",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{tvl-api-token}}"
+					}
+				],
+				"url": {
+					"raw": "{{tvl-api-url}}/v2/sdg/orgs/scores?ids=KR7015760002&start=2020-08-01",
+					"host": [
+						"{{tvl-api-url}}"
+					],
+					"path": [
+						"v2",
+						"sdg",
+						"orgs",
+						"scores"
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "KR7015760002"
+						},
+						{
+							"key": "start",
+							"value": "2020-08-01"
+						},
+						{
+							"key": "end",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "customDates",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "frequency",
+							"value": "w",
+							"disabled": true
+						},
+						{
+							"key": "categories",
+							"value": "BusinessEthics,SupplyChainManagement",
+							"disabled": true
+						},
+						{
+							"key": "types",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SDG Spotlights",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{tvl-api-token}}"
+					}
+				],
+				"url": {
+					"raw": "{{tvl-api-url}}/v2/sdg/orgs/spotlights?ids=KR7015760002&start=2020-08-01&bullets=true",
+					"host": [
+						"{{tvl-api-url}}"
+					],
+					"path": [
+						"v2",
+						"sdg",
+						"orgs",
+						"spotlights"
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "KR7015760002"
+						},
+						{
+							"key": "start",
+							"value": "2020-08-01"
+						},
+						{
+							"key": "end",
+							"value": "2020-10-12",
+							"disabled": true
+						},
+						{
+							"key": "bullets",
+							"value": "true"
+						},
+						{
+							"key": "primarOnly",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "categories",
+							"value": "BusinessEthics,SupplyChainManagement",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,472 @@
+{
+	"info": {
+		"_postman_id": "98fe9cb4-ec3c-420a-a754-dc2f3c06913c",
+		"name": "TVLDataAPI API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Company Score",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accesstoken",
+						"type": "text",
+						"value": "{{tvl-data-api-token}}"
+					}
+				],
+				"url": {
+					"raw": "{{tvl-data-api-url}}/v3/data/companies/US74727D3061/score?score_type=pulse,insight,momentum",
+					"host": [
+						"{{tvl-data-api-url}}"
+					],
+					"path": [
+						"v3",
+						"data",
+						"companies",
+						"US74727D3061",
+						"score"
+					],
+					"query": [
+						{
+							"key": "score_type",
+							"value": "pulse,insight,momentum"
+						},
+						{
+							"key": "includeArticles",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "percentile",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "volume",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "metrics",
+							"value": "allmetrics",
+							"disabled": true
+						},
+						{
+							"key": "app",
+							"value": "dataApi",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "companies/:ISIN/score",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2RldmF1dGguaW5zaWdodDM2MC5pbyIsInN1YiI6Im1pZ2FuZ2E3N0BnbWFpbC5jb20iLCJleHAiOiIyMDE4LTAyLTI3VDE1OjQ0OjIwLjQyMFoiLCJpYXQiOiIyMDE3LTAyLTI3VDE1OjQ0OjIwLjQyMFoiLCJuYW1lIjoidGVzdGVyIiwiZW5jIjoiZTA0ZmIxOWQ0MGQ3OTkzM2QwYjM3ZDZmYzRhM2MwMzdkNTQ3ZThjMzk3ZDQ2Nzk5ZjE3YzJlNWZmZTNjZDhhZGE4MmM2YTA2MmQ2NjJhZDJkZjk0OGRmMjhlNjNmNmU3NWU5ODAxN2YyNDhkM2Q5ZDk1MjVkNjlmNjIzOWMxODUyM2U3OWUzOTEzYmYyYzJiNDk1ZGY4YjY1ODBiOTYzOGVmOGZhYjM2Y2E5ZWQxMmZkNjBlMDE2ZDVmYmQwYTgxZDFmMzVmNDhmODg0YmFhMTQ4YzEwNDk4MzZmZmMyZWEyNzdkN2ViODQ1MTlmNWIyYWM5Y2EwMTk4YTBkNGJiZGFlM2Q5NDUyOTQxMmQxOGM5MWUzNzQ5ZGYzMTEyZjgwMjRjYjMwYmIxYjRkODkxZTQ4OWM3N2JiZDU2NGJiMmFjMDNiZDdjZDQ1ZjViMzYxYWFhZDliMGRjNTE1OTI0NzhjNTBmMzU2ZDZkNGQzNDAxMDJiY2Y5NjI0MDM3NWJhOWVhN2ZiMTk4MTRiNTRhODU4NTNiYjkyNzhjM2M5MzcwOThjMGJkMWEyYTE3N2M3OWE3MjE0ZWI2YjFmZjQ5MzNiZTBjOTA2YTk4YzllMThjNTY0Y2UifQ.fi-fD6-2llPUEuSFqLQK_lKQzjmAiWO6NeiXVpjXY4E",
+								"disabled": true
+							},
+							{
+								"key": "accesstoken",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2RldmF1dGguaW5zaWdodDM2MC5pbyIsInN1YiI6IndheWxvbi5zdGlwZXNAdHJ1dmFsdWVsYWJzLmNvbSIsImV4cCI6IjIwMTctMDktMDZUMjA6Mzk6MTguMzUzWiIsImlhdCI6IjIwMTYtMDktMDZUMjA6Mzk6MTguMzUzWiIsIm5hbWUiOiJXYXlsb24gU3RpcGVzIiwiZW5jIjoiZTA0ZmIxOWQ0MGQ3OTkzM2QwYjM3ZDZmYzRhM2MwMzdkNTQ3ZWNjMDkxY2U2OWNlZjc2YTM5NjRkMzdhYzBiNWJmMmUzMTAyMmI2YjI0ZDFkM2MyODRmN2Q4NjNhYmU2NWM5ZjU2MmI3NDhiM2Q5NTgxMmJkOGM4NjQyZmQ2YmIwMGVmOTAzZTM0OTI2YTMzNTE0YWZhZWQ1YzBkOWIzNmVjODNmZDNmY2ZjOGQxNzJkNzBjMDYzYTBiZWQwYzgxZDllNzUxNDZiZjhjYjZhOTRkZWMyMTk4MjBlOGQ0ZWE3NjY1NjZlZDQ5MDlmZWJjYWNkNWIyNWFkNDNkNDlhMzhmMjA4YTA5ODExY2QwZGJkOGFkN2E4ZGU3NWUyMjg2MzM4ODY4ZjAxYjUxYTcxYjA0Y2YyZmVmOTk2ZmUwNzBiMDZlOTRjNTU3ZjRlNjYyYTRmMTlkNTk5NjQ3YzMxMjg5NTJhMDE1YzNjNjk0NGQ0ZDJkZGFjYTYyNDAyOWYxYjliYmYyMGU4MTVkNTRiYzViNWY5Y2FmN2NkYzhlMzkxMWRiMGNkMWEzOWI3M2Q4ZGQ3YzBjYjk1OTBjZTA5NjI3ZmQ4MDNhYjM5NmNjNDdjZDNiOWZmYjZmMTFhZjQ5ZTE0OTdkMzg4N2NkMjdlNGRhMzYzZWFmIn0.AALfYlimxjng6hHHbF5vDMninMoQ3hqEkxRUpUUYiBA",
+								"disabled": true
+							},
+							{
+								"key": "accesstoken",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2RldmF1dGguaW5zaWdodDM2MC5pbyIsInN1YiI6InNod2V0YS5zaGFybWFAdG90aGVuZXcuY29tIiwiZXhwIjoiMjAxNy0wMy0xNlQwOTo0MzozMC4yMjJaIiwiaWF0IjoiMjAxNy0wMy0xNVQwOTo0MzozMC4yMjJaIiwibmFtZSI6IlNod2V0YSBTaGFybWEiLCJlbmMiOiJlMDRmYjE5ZDQwZDc5OTMzZDBiMzdkNmZjNGEzYzAzN2Q1NDdlYWMzOGRjMDNlYzhlMTdkMDI0OTk1NjJkOGEyYmQ3ODMwNWM3YjZhMjM4MWQ4OTc4NGYyOGE2OWZhZWIwYTlmMDc3ZTc3OGI2ZjhmOGYyNThmY2U3MjM4ZTg5ODA4ZTE5NzE5MTlkNDcyMmI0NjQ4YWNlYzAyNWQ5YTMxYmM4OGE4M2ZjYTlhZGIyM2RhNWEwNjZiNWVlZTBjZDBjM2U5NWYwMWI3ODBiZWFjNjBjOTIxOGUzN2ZlZDRiYjZlN2QzN2YyNWYxNWU2YjJlYzg4YTk0ZmNmMjA0ZDkwYmIzYjhjMTQ5MjEzZDlkOTkzYTI3NDgyYjY1YzYzODYyY2NkMjViYzFkNTlhMTBlMDNjOTNiYzc4OTI0YjUzY2NjM2Q4NmM5MTFmMWIyMzBhNGYxOWI1YmM2MTNjNjFkZDg1NWEwNDU5OWMxYzc0YjVlNjJjZmRlNjkwZTYwZjFmMWU1YWU1OThmNDUwM2FlNGU0NDg3YmQ3NGNiOGUyZjExZmQxN2MzYjRhMTczOTVlYjM2NTdlOTYzMGNiYmQ2NmFlM2M1MWJhYTk2Y2Y1MWQ3NzZkZGFhM2Q0ZWE2NTlmNSJ9.hZhOptH1CmSzHGQ0UIspR8nGk4wSFYbNq_xuqqR79q8",
+								"disabled": true
+							},
+							{
+								"key": "accesstoken",
+								"value": "{{apiaccesstoken}}",
+								"disabled": true
+							},
+							{
+								"key": "accesstoken",
+								"value": "{{sasbapitoken}}",
+								"disabled": false
+							}
+						],
+						"url": {
+							"raw": "{{dataurl}}/v3/data/companies/US56400P2011/score?metrics=allmaterial&score_type=pulse,insight&percentile=true",
+							"host": [
+								"{{dataurl}}"
+							],
+							"path": [
+								"v3",
+								"data",
+								"companies",
+								"US56400P2011",
+								"score"
+							],
+							"query": [
+								{
+									"key": "metrics",
+									"value": "allmaterial"
+								},
+								{
+									"key": "score_type",
+									"value": "pulse,insight"
+								},
+								{
+									"key": "percentile",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "",
+							"name": "Access-Control-Allow-Credentials",
+							"description": ""
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "",
+							"name": "Access-Control-Allow-Headers",
+							"description": ""
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "",
+							"name": "Access-Control-Allow-Methods",
+							"description": ""
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "",
+							"name": "Access-Control-Allow-Origin",
+							"description": ""
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "",
+							"name": "Access-Control-Expose-Headers",
+							"description": ""
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": ""
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"name": "Content-Encoding",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Sep 2017 15:20:32 GMT",
+							"name": "Date",
+							"description": ""
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.4.6 (Ubuntu)",
+							"name": "Server",
+							"description": ""
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": ""
+						},
+						{
+							"key": "set-cookie",
+							"value": "truValueLabsSSO=s%3AlFPtBuW-fT4MYrbLA0XaomKpyY54iKni.KsAiHb0n3EVZxHIFe4iawqPWfeiMQoXmMEq5jBKPXgQ; Path=/; Expires=Thu, 07 Sep 2017 15:20:32 GMT; HttpOnly",
+							"name": "set-cookie",
+							"description": ""
+						},
+						{
+							"key": "set-cookie",
+							"value": "sails.sid=s%3AGDAM9H0hXC8fztI4rLHkZCGd5Uan2OmL.LD9BLVNVHFm%2B9y2DNebXa47dv0b6%2BM8UJtfUVn9KQcc; Path=/; HttpOnly",
+							"name": "set-cookie",
+							"description": ""
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 04:14:07 GMT+0100 (Central European Standard Time)",
+							"httpOnly": true,
+							"domain": "stagingapi.insight360.io",
+							"path": "/",
+							"secure": false,
+							"value": "s%3AGDAM9H0hXC8fztI4rLHkZCGd5Uan2OmL.LD9BLVNVHFm%2B9y2DNebXa47dv0b6%2BM8UJtfUVn9KQcc",
+							"key": "sails.sid"
+						},
+						{
+							"expires": "Thu Sep 07 2017 17:20:32 GMT+0200 (Central European Summer Time)",
+							"httpOnly": true,
+							"domain": "stagingapi.insight360.io",
+							"path": "/",
+							"secure": false,
+							"value": "s%3AlFPtBuW-fT4MYrbLA0XaomKpyY54iKni.KsAiHb0n3EVZxHIFe4iawqPWfeiMQoXmMEq5jBKPXgQ",
+							"key": "truValueLabsSSO"
+						}
+					],
+					"body": "{\"ISIN\":\"US56400P2011\",\"CUSIP\":\"56400P201\",\"SEDOL\":\"B010TR8\",\"TICKER\":\"MNKD\",\"companyName\":\"MannKind\",\"mode\":\"Insight360 SASB Edition API\",\"date\":\"2017-09-05T00:00:00.000Z\",\"hourMs\":1504569600000,\"insight\":{\"MaterialityScore\":76.95292298063637,\"MaterialityScoreSectorPercentile\":79.29663774403471,\"AccessAndAffordability\":85.14255985870813,\"AccessAndAffordabilitySectorPercentile\":85.53841463414633,\"BusinessEthicsAndTransparencyOfPayments\":73.51695806534515,\"BusinessEthicsAndTransparencyOfPaymentsSectorPercentile\":94.39534883720931,\"CustomerWelfare\":75.88212862423809,\"CustomerWelfareSectorPercentile\":87.50785973397824,\"EmployeeHealthSafetyAndWellbeing\":\"NA\",\"EnergyManagement\":\"NA\",\"FairMarketingAndAdvertising\":\"NA\",\"HumanRightsAndCommunityRelations\":81.50399723859917,\"HumanRightsAndCommunityRelationsSectorPercentile\":85.66005471956224,\"LifecycleImpactsOfProductsAndServices\":73.09715529996441,\"LifecycleImpactsOfProductsAndServicesSectorPercentile\":58.6845703125,\"ProductQualityAndSafety\":75.97618305557386,\"ProductQualityAndSafetySectorPercentile\":81.75445897740785,\"RecruitmentDevelopmentAndRetention\":56.046049807463426,\"RecruitmentDevelopmentAndRetentionSectorPercentile\":55.617977528089895,\"SupplyChainManagement\":\"NA\",\"WasteAndHazardousMaterialsManagement\":\"NA\",\"WaterAndWastewaterManagement\":\"NA\"},\"pulse\":{\"MaterialityScore\":83.42758617969416,\"AccessAndAffordability\":88.31748557674987,\"BusinessEthicsAndTransparencyOfPayments\":42.13890320948762,\"CustomerWelfare\":87.8567086780976,\"EmployeeHealthSafetyAndWellbeing\":\"NA\",\"EnergyManagement\":\"NA\",\"FairMarketingAndAdvertising\":\"NA\",\"HumanRightsAndCommunityRelations\":91.50328913844325,\"LifecycleImpactsOfProductsAndServices\":89.94962174733071,\"ProductQualityAndSafety\":90.14762569630525,\"RecruitmentDevelopmentAndRetention\":86.52294953125592,\"SupplyChainManagement\":\"NA\",\"WasteAndHazardousMaterialsManagement\":\"NA\",\"WaterAndWastewaterManagement\":\"NA\"}}"
+				}
+			]
+		},
+		{
+			"name": "Get Company Momentum",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accesstoken",
+						"type": "text",
+						"value": "{{tvl-data-api-token}}"
+					}
+				],
+				"url": {
+					"raw": "{{tvl-data-api-url}}/v3/data/companies/US74727D3061/momentum?start_date=2020-01-01&end_date=2021-01-01",
+					"host": [
+						"{{tvl-data-api-url}}"
+					],
+					"path": [
+						"v3",
+						"data",
+						"companies",
+						"US74727D3061",
+						"momentum"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2020-01-01"
+						},
+						{
+							"key": "end_date",
+							"value": "2021-01-01"
+						},
+						{
+							"key": "percentile",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "metrics",
+							"value": "allmetrics",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "companies/:ISIN/score",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2RldmF1dGguaW5zaWdodDM2MC5pbyIsInN1YiI6Im1pZ2FuZ2E3N0BnbWFpbC5jb20iLCJleHAiOiIyMDE4LTAyLTI3VDE1OjQ0OjIwLjQyMFoiLCJpYXQiOiIyMDE3LTAyLTI3VDE1OjQ0OjIwLjQyMFoiLCJuYW1lIjoidGVzdGVyIiwiZW5jIjoiZTA0ZmIxOWQ0MGQ3OTkzM2QwYjM3ZDZmYzRhM2MwMzdkNTQ3ZThjMzk3ZDQ2Nzk5ZjE3YzJlNWZmZTNjZDhhZGE4MmM2YTA2MmQ2NjJhZDJkZjk0OGRmMjhlNjNmNmU3NWU5ODAxN2YyNDhkM2Q5ZDk1MjVkNjlmNjIzOWMxODUyM2U3OWUzOTEzYmYyYzJiNDk1ZGY4YjY1ODBiOTYzOGVmOGZhYjM2Y2E5ZWQxMmZkNjBlMDE2ZDVmYmQwYTgxZDFmMzVmNDhmODg0YmFhMTQ4YzEwNDk4MzZmZmMyZWEyNzdkN2ViODQ1MTlmNWIyYWM5Y2EwMTk4YTBkNGJiZGFlM2Q5NDUyOTQxMmQxOGM5MWUzNzQ5ZGYzMTEyZjgwMjRjYjMwYmIxYjRkODkxZTQ4OWM3N2JiZDU2NGJiMmFjMDNiZDdjZDQ1ZjViMzYxYWFhZDliMGRjNTE1OTI0NzhjNTBmMzU2ZDZkNGQzNDAxMDJiY2Y5NjI0MDM3NWJhOWVhN2ZiMTk4MTRiNTRhODU4NTNiYjkyNzhjM2M5MzcwOThjMGJkMWEyYTE3N2M3OWE3MjE0ZWI2YjFmZjQ5MzNiZTBjOTA2YTk4YzllMThjNTY0Y2UifQ.fi-fD6-2llPUEuSFqLQK_lKQzjmAiWO6NeiXVpjXY4E",
+								"disabled": true
+							},
+							{
+								"key": "accesstoken",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2RldmF1dGguaW5zaWdodDM2MC5pbyIsInN1YiI6IndheWxvbi5zdGlwZXNAdHJ1dmFsdWVsYWJzLmNvbSIsImV4cCI6IjIwMTctMDktMDZUMjA6Mzk6MTguMzUzWiIsImlhdCI6IjIwMTYtMDktMDZUMjA6Mzk6MTguMzUzWiIsIm5hbWUiOiJXYXlsb24gU3RpcGVzIiwiZW5jIjoiZTA0ZmIxOWQ0MGQ3OTkzM2QwYjM3ZDZmYzRhM2MwMzdkNTQ3ZWNjMDkxY2U2OWNlZjc2YTM5NjRkMzdhYzBiNWJmMmUzMTAyMmI2YjI0ZDFkM2MyODRmN2Q4NjNhYmU2NWM5ZjU2MmI3NDhiM2Q5NTgxMmJkOGM4NjQyZmQ2YmIwMGVmOTAzZTM0OTI2YTMzNTE0YWZhZWQ1YzBkOWIzNmVjODNmZDNmY2ZjOGQxNzJkNzBjMDYzYTBiZWQwYzgxZDllNzUxNDZiZjhjYjZhOTRkZWMyMTk4MjBlOGQ0ZWE3NjY1NjZlZDQ5MDlmZWJjYWNkNWIyNWFkNDNkNDlhMzhmMjA4YTA5ODExY2QwZGJkOGFkN2E4ZGU3NWUyMjg2MzM4ODY4ZjAxYjUxYTcxYjA0Y2YyZmVmOTk2ZmUwNzBiMDZlOTRjNTU3ZjRlNjYyYTRmMTlkNTk5NjQ3YzMxMjg5NTJhMDE1YzNjNjk0NGQ0ZDJkZGFjYTYyNDAyOWYxYjliYmYyMGU4MTVkNTRiYzViNWY5Y2FmN2NkYzhlMzkxMWRiMGNkMWEzOWI3M2Q4ZGQ3YzBjYjk1OTBjZTA5NjI3ZmQ4MDNhYjM5NmNjNDdjZDNiOWZmYjZmMTFhZjQ5ZTE0OTdkMzg4N2NkMjdlNGRhMzYzZWFmIn0.AALfYlimxjng6hHHbF5vDMninMoQ3hqEkxRUpUUYiBA",
+								"disabled": true
+							},
+							{
+								"key": "accesstoken",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2RldmF1dGguaW5zaWdodDM2MC5pbyIsInN1YiI6InNod2V0YS5zaGFybWFAdG90aGVuZXcuY29tIiwiZXhwIjoiMjAxNy0wMy0xNlQwOTo0MzozMC4yMjJaIiwiaWF0IjoiMjAxNy0wMy0xNVQwOTo0MzozMC4yMjJaIiwibmFtZSI6IlNod2V0YSBTaGFybWEiLCJlbmMiOiJlMDRmYjE5ZDQwZDc5OTMzZDBiMzdkNmZjNGEzYzAzN2Q1NDdlYWMzOGRjMDNlYzhlMTdkMDI0OTk1NjJkOGEyYmQ3ODMwNWM3YjZhMjM4MWQ4OTc4NGYyOGE2OWZhZWIwYTlmMDc3ZTc3OGI2ZjhmOGYyNThmY2U3MjM4ZTg5ODA4ZTE5NzE5MTlkNDcyMmI0NjQ4YWNlYzAyNWQ5YTMxYmM4OGE4M2ZjYTlhZGIyM2RhNWEwNjZiNWVlZTBjZDBjM2U5NWYwMWI3ODBiZWFjNjBjOTIxOGUzN2ZlZDRiYjZlN2QzN2YyNWYxNWU2YjJlYzg4YTk0ZmNmMjA0ZDkwYmIzYjhjMTQ5MjEzZDlkOTkzYTI3NDgyYjY1YzYzODYyY2NkMjViYzFkNTlhMTBlMDNjOTNiYzc4OTI0YjUzY2NjM2Q4NmM5MTFmMWIyMzBhNGYxOWI1YmM2MTNjNjFkZDg1NWEwNDU5OWMxYzc0YjVlNjJjZmRlNjkwZTYwZjFmMWU1YWU1OThmNDUwM2FlNGU0NDg3YmQ3NGNiOGUyZjExZmQxN2MzYjRhMTczOTVlYjM2NTdlOTYzMGNiYmQ2NmFlM2M1MWJhYTk2Y2Y1MWQ3NzZkZGFhM2Q0ZWE2NTlmNSJ9.hZhOptH1CmSzHGQ0UIspR8nGk4wSFYbNq_xuqqR79q8",
+								"disabled": true
+							},
+							{
+								"key": "accesstoken",
+								"value": "{{apiaccesstoken}}",
+								"disabled": true
+							},
+							{
+								"key": "accesstoken",
+								"value": "{{sasbapitoken}}",
+								"disabled": false
+							}
+						],
+						"url": {
+							"raw": "{{dataurl}}/v3/data/companies/US56400P2011/score?metrics=allmaterial&score_type=pulse,insight&percentile=true",
+							"host": [
+								"{{dataurl}}"
+							],
+							"path": [
+								"v3",
+								"data",
+								"companies",
+								"US56400P2011",
+								"score"
+							],
+							"query": [
+								{
+									"key": "metrics",
+									"value": "allmaterial"
+								},
+								{
+									"key": "score_type",
+									"value": "pulse,insight"
+								},
+								{
+									"key": "percentile",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "",
+							"name": "Access-Control-Allow-Credentials",
+							"description": ""
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "",
+							"name": "Access-Control-Allow-Headers",
+							"description": ""
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "",
+							"name": "Access-Control-Allow-Methods",
+							"description": ""
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "",
+							"name": "Access-Control-Allow-Origin",
+							"description": ""
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "",
+							"name": "Access-Control-Expose-Headers",
+							"description": ""
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": ""
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"name": "Content-Encoding",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Sep 2017 15:20:32 GMT",
+							"name": "Date",
+							"description": ""
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.4.6 (Ubuntu)",
+							"name": "Server",
+							"description": ""
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": ""
+						},
+						{
+							"key": "set-cookie",
+							"value": "truValueLabsSSO=s%3AlFPtBuW-fT4MYrbLA0XaomKpyY54iKni.KsAiHb0n3EVZxHIFe4iawqPWfeiMQoXmMEq5jBKPXgQ; Path=/; Expires=Thu, 07 Sep 2017 15:20:32 GMT; HttpOnly",
+							"name": "set-cookie",
+							"description": ""
+						},
+						{
+							"key": "set-cookie",
+							"value": "sails.sid=s%3AGDAM9H0hXC8fztI4rLHkZCGd5Uan2OmL.LD9BLVNVHFm%2B9y2DNebXa47dv0b6%2BM8UJtfUVn9KQcc; Path=/; HttpOnly",
+							"name": "set-cookie",
+							"description": ""
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 04:14:07 GMT+0100 (Central European Standard Time)",
+							"httpOnly": true,
+							"domain": "stagingapi.insight360.io",
+							"path": "/",
+							"secure": false,
+							"value": "s%3AGDAM9H0hXC8fztI4rLHkZCGd5Uan2OmL.LD9BLVNVHFm%2B9y2DNebXa47dv0b6%2BM8UJtfUVn9KQcc",
+							"key": "sails.sid"
+						},
+						{
+							"expires": "Thu Sep 07 2017 17:20:32 GMT+0200 (Central European Summer Time)",
+							"httpOnly": true,
+							"domain": "stagingapi.insight360.io",
+							"path": "/",
+							"secure": false,
+							"value": "s%3AlFPtBuW-fT4MYrbLA0XaomKpyY54iKni.KsAiHb0n3EVZxHIFe4iawqPWfeiMQoXmMEq5jBKPXgQ",
+							"key": "truValueLabsSSO"
+						}
+					],
+					"body": "{\"ISIN\":\"US56400P2011\",\"CUSIP\":\"56400P201\",\"SEDOL\":\"B010TR8\",\"TICKER\":\"MNKD\",\"companyName\":\"MannKind\",\"mode\":\"Insight360 SASB Edition API\",\"date\":\"2017-09-05T00:00:00.000Z\",\"hourMs\":1504569600000,\"insight\":{\"MaterialityScore\":76.95292298063637,\"MaterialityScoreSectorPercentile\":79.29663774403471,\"AccessAndAffordability\":85.14255985870813,\"AccessAndAffordabilitySectorPercentile\":85.53841463414633,\"BusinessEthicsAndTransparencyOfPayments\":73.51695806534515,\"BusinessEthicsAndTransparencyOfPaymentsSectorPercentile\":94.39534883720931,\"CustomerWelfare\":75.88212862423809,\"CustomerWelfareSectorPercentile\":87.50785973397824,\"EmployeeHealthSafetyAndWellbeing\":\"NA\",\"EnergyManagement\":\"NA\",\"FairMarketingAndAdvertising\":\"NA\",\"HumanRightsAndCommunityRelations\":81.50399723859917,\"HumanRightsAndCommunityRelationsSectorPercentile\":85.66005471956224,\"LifecycleImpactsOfProductsAndServices\":73.09715529996441,\"LifecycleImpactsOfProductsAndServicesSectorPercentile\":58.6845703125,\"ProductQualityAndSafety\":75.97618305557386,\"ProductQualityAndSafetySectorPercentile\":81.75445897740785,\"RecruitmentDevelopmentAndRetention\":56.046049807463426,\"RecruitmentDevelopmentAndRetentionSectorPercentile\":55.617977528089895,\"SupplyChainManagement\":\"NA\",\"WasteAndHazardousMaterialsManagement\":\"NA\",\"WaterAndWastewaterManagement\":\"NA\"},\"pulse\":{\"MaterialityScore\":83.42758617969416,\"AccessAndAffordability\":88.31748557674987,\"BusinessEthicsAndTransparencyOfPayments\":42.13890320948762,\"CustomerWelfare\":87.8567086780976,\"EmployeeHealthSafetyAndWellbeing\":\"NA\",\"EnergyManagement\":\"NA\",\"FairMarketingAndAdvertising\":\"NA\",\"HumanRightsAndCommunityRelations\":91.50328913844325,\"LifecycleImpactsOfProductsAndServices\":89.94962174733071,\"ProductQualityAndSafety\":90.14762569630525,\"RecruitmentDevelopmentAndRetention\":86.52294953125592,\"SupplyChainManagement\":\"NA\",\"WasteAndHazardousMaterialsManagement\":\"NA\",\"WaterAndWastewaterManagement\":\"NA\"}}"
+				}
+			]
+		}
+	]
+}
